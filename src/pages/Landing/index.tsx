@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './style.css'
+
 import logoImg from '../../assets/images/logo.svg'
 import landingImg from '../../assets/images/landing.svg'
 
@@ -18,7 +20,7 @@ const Landing: React.FC = () => {
         <img
           src={landingImg}
           alt="plataforma de estudo"
-          className="hero-img"
+          className="hero-image"
         />
 
         <div className="buttons-container">
