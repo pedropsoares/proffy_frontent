@@ -12,7 +12,7 @@ import purpleHeartIcon from '../../assets/images/icons/purple-heart.svg'
 const Landing: React.FC = () => {
   return (
     <div id="page-landing">
-      <div id="page-landing-content" className="caontainer">
+      <div id="page-landing-content" className="container">
         <div className="logo-container">
           <img src={logoImg} alt="Proffy" />
           <h2>Sua plataformar de estudos online</h2>
@@ -29,11 +29,11 @@ const Landing: React.FC = () => {
             Estudar
           </a>
           <a href="" className="give-classes">
-            <img src={giveClassesIcon} alt="estudar"/>
-            Estudar
+            <img src={giveClassesIcon} alt="Dar aulas"/>
+            Dar aulas
           </a>
         </div>
-        <span className="total-conections">
+        <span className="total-connections">
           total de 200 conexões já realizadas <img src={purpleHeartIcon} alt="coração roxo"/>
         </span>
       </div>
