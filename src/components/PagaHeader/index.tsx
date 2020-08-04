@@ -9,7 +9,7 @@ interface PagaHeaderProps {
   title: String;
 }
 
-const PagaHeader: React.FC<PagaHeaderProps> = ({ title }) => {
+const PagaHeader: React.FC<PagaHeaderProps> = ({ title, children }) => {
   return (
     <header className="page-header">
       <div className="top-bar-container">
@@ -23,6 +23,7 @@ const PagaHeader: React.FC<PagaHeaderProps> = ({ title }) => {
         <strong>
           {title}
         </strong>
+        {children}
       </div>
     </header>
   )
