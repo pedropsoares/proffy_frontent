@@ -9,9 +9,10 @@ import './style.css'
 
 interface PagaHeaderProps {
   title: String;
+  description?: string;
 }
 
-const PagaHeader: React.FC<PagaHeaderProps> = ({ title, children }) => {
+const PagaHeader: React.FC<PagaHeaderProps> = ({ title, description, children }) => {
   return (
     <header className="page-header">
       <div className="top-bar-container">
@@ -25,6 +26,7 @@ const PagaHeader: React.FC<PagaHeaderProps> = ({ title, children }) => {
         <strong>
           {title}
         </strong>
+        {description && <p>{description}</p>}
         {children}
       </div>
     </header>
