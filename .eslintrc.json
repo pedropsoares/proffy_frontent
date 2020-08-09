@@ -31,6 +31,7 @@
         "jsx-a11y/label-has-associated-control": "off",
         "react/jsx-props-no-spreading": "off",
         "react/jsx-indent": "off",
-        "arrow-parens": "off"
+        "arrow-parens": "off",
+        "react/jsx-one-expression-per-line": "off"
     }
 }
