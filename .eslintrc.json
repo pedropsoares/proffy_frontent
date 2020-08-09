@@ -33,6 +33,7 @@
         "react/jsx-indent": "off",
         "arrow-parens": "off",
         "react/jsx-one-expression-per-line": "off",
-        "no-alert": "off"
+        "no-alert": "off",
+        "object-curly-newline": "off"
     }
 }
