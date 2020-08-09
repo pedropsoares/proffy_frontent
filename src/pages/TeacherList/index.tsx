@@ -1,4 +1,4 @@
-import React, { useState, FormEvent } from 'react';
+import React, { useState, useEffect, FormEvent } from 'react';
 
 import PageHearder from '../../components/PagaHeader';
 import CardTeacher, { Teacher } from '../../components/CardTeacher';
@@ -15,10 +15,18 @@ const TeacherForm: React.FC = () => {
   const [week_day, setWeek_day] = useState('');
   const [time, setTime] = useState('');
 
+  useEffect(() => {
+    api.get('/classes').then(response => {
+      const { data } = response;
+
+      setTeachers(data);
+    });
+  }, []);
+
   const seacherTeachers = async (e: FormEvent) => {
     e.preventDefault();
 
-    const response = await api.get('classes', {
+    const response = await api.get('classes/filter', {
       params: {
         subject,
         week_day,
@@ -27,6 +35,7 @@ const TeacherForm: React.FC = () => {
     });
     setTeachers(response.data);
   };
+
   return (
     <div id="page-teacher-list" className="container">
       <PageHearder title="Estes são os proffys disponíveis.">
