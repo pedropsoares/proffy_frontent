@@ -32,6 +32,7 @@
         "react/jsx-props-no-spreading": "off",
         "react/jsx-indent": "off",
         "arrow-parens": "off",
-        "react/jsx-one-expression-per-line": "off"
+        "react/jsx-one-expression-per-line": "off",
+        "no-alert": "off"
     }
 }
