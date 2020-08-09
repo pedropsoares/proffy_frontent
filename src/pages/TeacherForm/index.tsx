@@ -3,6 +3,7 @@ import React from 'react';
 import PageHearder from '../../components/PagaHeader';
 import Input from '../../components/Input';
 import Textarea from '../../components/Textarea';
+import Select from '../../components/Select/index';
 
 import warningIcon from '../../assets/images/icons/warning.svg';
 
@@ -28,7 +29,20 @@ const TeacherForm: React.FC = () => {
 
         <fieldset>
           <legend>Sobre a aula</legend>
-          <Input name="subject" label="Matéria" />
+
+          <Select
+            name="subject"
+            label="Matéria"
+            options={[
+              { value: 'Artes', label: 'Artes' },
+              { value: 'Biologia', label: 'Biologia' },
+              { value: 'Matematica', label: 'Matematica' },
+              { value: 'Fisica', label: 'Fisica' },
+              { value: 'Quimica', label: 'Quimica' },
+              { value: 'Educação Fisica', label: 'Educação Fisica' },
+            ]}
+          />
+
           <Input name="cost" label="Custo da hora-aula" />
 
         </fieldset>
